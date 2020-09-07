@@ -39,7 +39,6 @@ int LinkedList<T>::size() const
 		temp = temp->getNext();
 		count = count + 1;
 	}
-
 	return(count);
 }
 
@@ -128,6 +127,7 @@ bool LinkedList<T>::removeBack()
 		{
 			temp = m_front;
 			delete temp;
+			temp = nullptr;
 			m_front = nullptr;
 			m_size--;
 			return (true);
@@ -145,7 +145,7 @@ bool LinkedList<T>::removeBack()
 		m_size--;
 	}
 
-	return(isRemoved);
+	return(true);
 }	
 
 template <typename T>
