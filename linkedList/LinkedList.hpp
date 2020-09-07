@@ -125,17 +125,17 @@ bool LinkedList<T>::removeBack()
 	else
 	{
 		secondintoLast = m_front;
-		if(getLength() == 1)
+		if(size() == 1)
 		{
 			secondintoLast = m_front;
 			delete secondintoLast;
 			m_front = nullptr;
 			m_size = m_size- 1;
-			return;
+			return (true);
 		}
 		for(int i=0;i<size();i++)
 		{
-			if(i==getLength()-2)
+			if(i==size()-2)
 			{
 				lastNode=secondintoLast->getNext();
 			}
