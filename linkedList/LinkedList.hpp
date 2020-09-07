@@ -39,9 +39,8 @@ int LinkedList<T>::size() const
 		temp = temp->getNext();
 		count = count + 1;
 	}
-	m_size = count;
 	
-	return(m_size);
+	return(count);
 }
 
 template <typename T>
@@ -53,7 +52,7 @@ bool LinkedList<T>::search(T value) const
 	// TODO 
 	for(int i=0; i<(size()); i++)
 	{
-		if(temp.getValue()== value)
+		if(temp->getValue()== value)
 		{
 			return (true);
 		}
