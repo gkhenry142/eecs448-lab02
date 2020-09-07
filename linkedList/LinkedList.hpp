@@ -39,7 +39,7 @@ int LinkedList<T>::size() const
 		temp = temp->getNext();
 		count = count + 1;
 	}
-	
+	m_size == 0;
 	return(count);
 }
 
