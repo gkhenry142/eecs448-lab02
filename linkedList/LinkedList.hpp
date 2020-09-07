@@ -39,8 +39,8 @@ int LinkedList<T>::size() const
 		temp = temp->getNext();
 		count = count + 1;
 	}
-	
-	return(m_size == count);
+
+	return(m_size(count));
 }
 
 template <typename T>
