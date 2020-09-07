@@ -39,9 +39,9 @@ int LinkedList<T>::size() const
 		temp = temp->getNext();
 		count = count + 1;
 	}
-	m_length = count;
+	m_size = count;
 	
-	return(m_length);
+	return(m_size);
 }
 
 template <typename T>
@@ -117,9 +117,34 @@ bool LinkedList<T>::removeBack()
 	Node<T>* secondintoLast = nullptr;
 	bool isRemoved = false;
 
-	/** TODO 
-		Fix this method
-	*/
+	// TODO 
+	if(m_front == nullptr)
+	{
+		return (false);
+	}
+	else
+	{
+		secondintoLast = m_front;
+		if(getLength() == 1)
+		{
+			secondintoLast = m_front;
+			delete secondintoLast;
+			m_front = nullptr;
+			m_size = m_size- 1;
+			return;
+		}
+		for(int i=0;i<size();i++)
+		{
+			if(i==getLength()-2)
+			{
+				lastNode=secondintoLast->getNext();
+			}
+			secondintoLast = secondintoLast -> getNext();
+		}
+		delete secondintoLast;
+		lastNode -> setNext(nullptr);
+		m_size = m_size-1;
+	}
 
 	return(isRemoved);
 }	
