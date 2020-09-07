@@ -49,7 +49,7 @@ bool LinkedList<T>::search(T value) const
 	bool isFound = false;
 
 	// TODO 
-	for(int i=0; i<(size()); i++)
+	for(int i=1; i<(size()); i++)
 	{
 		if(temp->getValue()== value)
 		{
@@ -132,7 +132,7 @@ bool LinkedList<T>::removeBack()
 			m_size--;
 			return (true);
 		}
-		for(int i=0;i<size();i++)
+		for(int i=1;i<size();i++)
 		{
 			if(i==size()-2)
 			{
